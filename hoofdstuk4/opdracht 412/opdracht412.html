@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Javascript &amp; jQuery opdrachten</title>
+<link href="_css/site.css" rel="stylesheet">
+<script src="_js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+
+    var snelheid = 0, vervoer = '', weg = '', totalesnelheid = '0';
+
+   function totaleSnelheid() {
+       
+   }
+
+    function getWaardes() {
+        snelheid = $('#snelheid').val();
+        weg = $('input[name=weg]:checked').val();
+        vervoer = $('input[name=vervoer]:checked').val();
+    }
+
+    function wijzigSnelheid() {
+
+        getWaardes();
+
+        //alert('plek: ' + weg);
+        //alert('vervoer: ' + vervoer);
+        //alert('snelheid: ' + snelheid);
+        var msg = '';
+        if (vervoer == 'voet') {
+            if (weg != 'stoep') {
+                msg += 'Ur not allwed hir';
+            }
+            if (snelheid > 5) {
+                msg += ' Ur goin to sanic 5 me';
+            }
+            else {
+                msg += 'het klopt nu';
+            }
+        }
+
+        if (vervoer == 'fiets') {
+            if (weg != 'straat') {
+                msg += 'U cnt walk hir u fagit.';
+            }
+            if (snelheid > 25) {
+                msg += ' Stahp tryin to be sanic.';
+            }
+            else {
+                msg += 'het klopt nu';
+            }
+        }
+
+        if (vervoer == 'auto') {
+            if (weg != 'autoweg') {
+                msg += 'Its not all ogre....';
+            }
+            if (snelheid > 100) {
+                msg += ' Its still not all ogre....';
+            }
+            else {
+                msg += 'het klopt nu';
+            }
+        }
+
+        if (vervoer == 'auto') {
+            if (weg != 'snelweg') {
+                msg += 'Fawk awf';
+            }
+            if (snelheid > 120) {
+                msg += ' Ill rek ur nan';
+            }
+            else {
+                msg += 'het klopt nu';
+            }
+        }
+
+        meldStatus(msg);
+       
+    }
+    //Met deze functie kun je een melding in de pagina schrijven.( in de div met id=’status’ )
+    function meldStatus(tekst) {
+        $('#status').html(tekst);
+    }
+</script>
+</head>
+
+            
+<body>
+
+     <form id="order">
+        <fieldset>
+            <legend>Data:</legend>
+                <div>
+                    <label>Vervoer: </label><input name="vervoer" type="radio" value="voet">te voet<input name="vervoer"
+                     type="radio" value="fiets">te fiets<input name="vervoer" type="radio" value="auto">met de auto
+                </div>
+                    <div>
+                        <label>Plek:</label>
+                        <input name="weg" type="radio" value="stoep">stoep
+                        <input name="weg" type="radio" value="straat">straat in de stad
+                        <input name="weg" type="radio" value="autoweg">autoweg
+                        <input name="weg" type="radio" value="snelweg">snelweg
+                    </div>
+                        <label>Snelheid:</label>
+                        <input id="snelheid" name="snelheid" size="3" type="text" value="0" maxlength="3">&nbsp;km/h
+        </fieldset>
+                        <input type="button" name="Verander" value="Wijzig" onclick="wijzigSnelheid()">
+     </form>
+                         <p id ="status">
+                      </p>
+<div class="wrapper">
+  <div class="header">
+    <p class="logo">JavaScript <i>&</i> jQuery <i class="mm">KW1C<br>ICT-academie</i></p>
+  </div>
+  <div class="content">
+    <div class="main">
+      <h1>Javascript opdracht xxx</h1>
+     
+    </div>
+  </div>
+  <div class="footer">
+    <p>JavaScript &amp; jQuery, W. van Bijnen en A. Saebu, BOL 4 - opleiding tot Applicatie ontwikkelaar (2013).</p>
+  </div>
+</div>
+</body>
+</html>
