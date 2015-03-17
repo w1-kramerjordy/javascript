@@ -1,5 +1,5 @@
 //globale variable lijst voor een array met getallen
-var lijst = [22,33,9];
+var lijst = [22,33,9,69];
 /*
 *  functie getGetal haalt het getal op in de div met id getal
 *  Deze functie heeft geen parameters
@@ -52,29 +52,57 @@ function printInHtml(plek, tekst) {
 
 
 function countLijst() {
-     alert('countLijst() wordt aangeroepen');
+    printInHtml('resultaat', lijst.length);
 }
 
 function countDistinct() {
-     alert('countDistinct() wordt aangeroepen');
+    var uniek = [];
+    for(x=0; x < lijst.length; x++) {
+        var gevonden = false;
+        for(y=0; y < uniek.length; y++) {
+            if (lijst[x] == uniek[y]) {
+                gevonden = true;
+            }
+            if (gevonden == false) {
+                uniek.push(lijst[x]);
+            }
+            uniek.length;
+            printInHtml('resultaat', uniek.length);
+        }
+    }
 	 
 }
 
 function deleteFirst() {
-     alert('deleteFirst() wordt aangeroepen');
+    lijst.shift();
+    printLijst();
 }
 
 function deleteLast() {
-     alert('deleteLast() wordt aangeroepen');
+    lijst.pop();
+    printLijst();
 }
 
 function sum() {
-     alert('sum() wordt aangeroepen');
+    var som = 0;
+    
+     for(x=0; x < lijst.length; x++) {
+         som = som + lijst[x];
+     }   
+     printInHtml('resultaat', som);
 }
 
+
 function average() {
-     alert('average() wordt aangeroepen');
-}
+   var av = 0;
+   var som = 0; 
+
+     for(x=0; x < lijst.length; x++) {
+         som = som + lijst[x];
+         av = som / lijst.length;
+     }
+     printInHtml('resultaat', av);
+} 
 
 $(document).ready(function() {
 	printLijst();

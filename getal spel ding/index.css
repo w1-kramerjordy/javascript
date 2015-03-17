@@ -1,0 +1,55 @@
+body {
+}
+
+.kader {
+    border:  2px solid black;
+    width: 600px;
+    height: 600px;
+    background-color: #38e7d2;
+}
+
+.hogerlager {
+    border: 2px solid black;
+    background-color: yellow;
+    color: red;
+    width: 450px;
+    height: 60px;
+    text-align: center;
+    float: left;
+    margin-left: 4.5em;
+    margin-top: 2em;
+}
+
+.getaltextbox {
+    float: left;
+    margin-left: 4.5em;
+}
+
+.button {
+    float: left;
+    margin-left: 14em;
+    margin-top: 2em;
+}
+
+.uitkomsttextbox {
+    float: left;
+    margin-left: 4.5em;
+    margin-top: 2em;
+}
+
+.score h1 {
+    margin-left: 1em;
+    margin-top: 4.25em;
+    font-family: 'Freestyle Script';
+    font-size: 80px;
+    color: #f00;
+}
+
+.footer {
+    border: 2px solid black;
+    background-color:  yellow;
+    width: 450px;
+    color: red;
+    text-align: center;
+    margin-left: 4.5em;
+}
