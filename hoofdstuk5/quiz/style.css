@@ -1,0 +1,16 @@
+input {
+    width: 2em;
+    float:  right;
+}
+ul {
+    list-style-type: none;
+}
+
+li {
+    width:  600px;
+    padding; 20px 0;
+}
+
+#status:before {
+    content:  "Status: ";
+}

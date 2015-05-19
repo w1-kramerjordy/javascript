@@ -26,7 +26,7 @@
                 <input type="number" value="ervaring" id="ervaring">
             <br>
             <br>
-                <button type="submit" onclick="controleren();" name="submit">verzenden</button>
+                <button onclick="getSalaris()" name="submit">verzenden</button>
         </form>
     </body>
 </html>

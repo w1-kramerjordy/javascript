@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Javascript &amp; jQuery opdrachten</title>
+<link href="_css/site.css" rel="stylesheet">
+<script src="_js/jquery-1.7.2.min.js"></script>
+
+<script>
+
+    var klas = ['Nick Arts', 'Thijs Assmann', 'Rick Bats', 'Kim Cobben', 'Richard van Dartel', 'Dennis van Empel', 'Luuk van Gennip', 'Florent Guichard', 'Mahamed Hassan', 'Stijn Hendriks', 'Dirk van Herpen', 'Daniël Kartotaroeno', 'Tonyvan Klink', 'Stephan Klomp', 'Twan Korthout', 'Max Lenssen', 'Aron van der Linden', 'Aron de Looijer', 'Anil Manbodh', 'Sietse Manders', 'Ben Moerkens', 'Sven van Mourik', 'Teun Salters', 'Sven Slijkoord', 'Daan Soeten', 'Joey van Straalen', 'Koen van Veen', 'Maxim Westbroek'];
+
+    function telOp() {
+        document.getElementById('stopwatch').innerHTML = '';
+        var t = 0;
+        while (t < 10) {
+            t++;
+            document.getElementById('stopwatch').innerHTML += t + ' ';
+        }
+    }
+    function telAf() {
+        document.getElementById('stopwatch').innerHTML = '';
+        var t = 11;
+        while (t > 1) {
+            t--;
+            document.getElementById('stopwatch').innerHTML += t + ' ';
+        }
+    }
+
+    function telOp50() {
+        document.getElementById('stopwatch').innerHTML = '';
+        var t = 0;
+        while (t < 50) {
+            t++;
+            document.getElementById('stopwatch').innerHTML += t + ' ';
+        }
+    }
+
+    function telAf60() {
+        document.getElementById('stopwatch').innerHTML = '';
+        {
+            var t = 0;
+
+            while (t <= 19) {
+                t++;
+                document.getElementById('stopwatch').innerHTML += (t * 3) + ' ';
+            }
+        }
+    }
+
+    function mensjes() {
+        var lgth = 0;
+        var longest;
+        var shortest;
+
+        for (var i = 0; i < klas.length; i++) {
+            if (klas[i].length > lgth) {
+                var lgth = klas[i].length;
+                longest = klas[i];
+                document.getElementById('stopwatch').innerHTML += longest + ' ';
+            }
+       }
+            for (var i = 0; i > klas.length; i--) {
+                if (klas[i].length < lgth) {
+                    var lgth = klas[i].length;
+                    shortest = klas[i];
+                    document.getElementById('stopwatch').innerHTML += shortest + ' ';
+                }
+            }
+
+      }  
+
+        alert(longest);
+    
+
+    function reset() {
+
+    }
+</script>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <p class="logo">JavaScript <i>&</i> jQuery <i class="mm">KW1C<br>ICT-academie</i></p>
+  </div>
+  <div class="content">
+    <div class="main">
+      <h1>Javascript opdracht 4C For en while lussen</h1>
+	  <form id="frm-timer">
+		<p>
+                <input type="button" value="tel tot 10" onclick="telOp();">
+                <input type="button" value="tel af naar 0" onclick="telAf();">
+                <input type="button" value="tel tot 50" onclick="telOp50();">
+                <input type="button" value="tel af van 60" onclick="telAf60();">
+                <input type="button" value="mensjes" onclick="mensjes();">
+		</p>
+		<div id="stopwatch"></div>
+
+	  </form>
+         <p id =”status”>
+          </p>
+
+    </div>
+  </div>
+  <div class="footer">
+    <p>JavaScript &amp; jQuery, W. van Bijnen en A. Saebu, BOL 4 - opleiding tot Applicatie ontwikkelaar (2013).</p>
+  </div>
+</div>
+</body>
+</html>
